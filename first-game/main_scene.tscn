@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ammtbj5u1xj"]
+
+[ext_resource type="PackedScene" uid="uid://bw73dp6fdi7eo" path="res://player/player.tscn" id="1_hdwcr"]
+[ext_resource type="PackedScene" uid="uid://dudus1mxqp1gn" path="res://snake/snake.tscn" id="2_tea3a"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_di5qx"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_hdwcr")]
+position = Vector2(-28, -1)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(28, 1)
+zoom = Vector2(2, 2)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-252.5, -21.5)
+scale = Vector2(17, 221)
+texture = SubResource("CanvasTexture_di5qx")
+
+[node name="Snake" parent="." instance=ExtResource("2_tea3a")]
+position = Vector2(22, -54)

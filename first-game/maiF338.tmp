@@ -1,17 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0ammtbj5u1xj"]
+[gd_scene load_steps=4 format=3 uid="uid://b0ammtbj5u1xj"]
 
 [ext_resource type="PackedScene" uid="uid://bw73dp6fdi7eo" path="res://player/player.tscn" id="1_hdwcr"]
 [ext_resource type="PackedScene" uid="uid://dudus1mxqp1gn" path="res://snake/snake.tscn" id="2_tea3a"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_di5qx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3csy"]
-size = Vector2(0.999999, 0.981901)
-
 [node name="MainScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hdwcr")]
-position = Vector2(-177, 0)
+position = Vector2(-28, -1)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(28, 1)
@@ -22,13 +19,7 @@ position = Vector2(-252.5, -21.5)
 scale = Vector2(17, 221)
 texture = SubResource("CanvasTexture_di5qx")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D2"]
-scale = Vector2(1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/RigidBody2D"]
-position = Vector2(0, 0.00904956)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_y3csy")
-
 [node name="Snake" parent="." instance=ExtResource("2_tea3a")]
 position = Vector2(22, -54)
+numBodyParts = null
+distanceBetweenBodyParts = null

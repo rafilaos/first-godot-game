@@ -6,7 +6,8 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bg531"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_fh3pt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
